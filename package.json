@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@deemlol/next-icons": "^0.1.9",
     "classnames": "^2.5.1",
     "motion": "^12.29.2",
     "next": "^16.1.6",

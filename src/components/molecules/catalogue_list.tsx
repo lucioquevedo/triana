@@ -31,4 +31,6 @@ interface CatalogueListProps {
 
 export type Product = {
   title: string;
+  render: string;
+  plan: string;
 };

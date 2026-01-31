@@ -10,9 +10,21 @@ const Catalogue = () => {
   const [activeProduct, setActiveProduct] = useState<number>(0);
 
   return (
-    <section className="relative w-full my-16 grid grid-cols-1 lg:grid-cols-6 lg:my-52">
+    <section
+      id="catalogo"
+      className="relative w-full my-16 grid grid-cols-1 lg:grid-cols-6 lg:my-52"
+    >
       <div className="p-5 lg:col-span-2 lg:px-12 lg:py-0">
-        <SectionTitle>Nuestro catálogo</SectionTitle>
+        <span className="overflow-y-clip block pb-1.5">
+          <SectionTitle
+            initial={{ y: "99%" }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true }}
+          >
+            Nuestro catálogo
+          </SectionTitle>
+        </span>
         <SectionBody>
           Este es el catálogo de productos. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -33,15 +45,28 @@ export default Catalogue;
 
 const products: Product[] = [
   {
-    title: "Padua",
-  },
-  {
-    title: "Pompeya",
-  },
-  {
-    title: "Siena",
+    title: "Asis",
+    render: "/catalogue/asis/asis_render.jpeg",
+    plan: "/catalogue/asis/asis_plan.jpg",
   },
   {
     title: "Genova",
+    render: "/catalogue/genova/genova_render.jpeg",
+    plan: "/catalogue/genova/genova_plan.jpg",
+  },
+  {
+    title: "Padua",
+    render: "/catalogue/padua/padua_render.jpg",
+    plan: "/catalogue/padua/padua_plan.jpg",
+  },
+  {
+    title: "Pompeya",
+    render: "/catalogue/pompeya/pompeya_render.png",
+    plan: "/catalogue/pompeya/pompeya_plan.jpg",
+  },
+  {
+    title: "Turin",
+    render: "/catalogue/turin/turin_render.jpeg",
+    plan: "/catalogue/turin/turin_plan.jpg",
   },
 ];

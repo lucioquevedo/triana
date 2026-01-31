@@ -1,9 +1,7 @@
-import SectionBody from "@/src/components/atoms/section_body";
-import SectionTitle from "@/src/components/atoms/section_title";
 import Catalogue from "@/src/components/organisms/catalogue";
 import Contact from "@/src/components/organisms/contact";
 import Hero from "@/src/components/organisms/hero";
-import Section from "@/src/components/organisms/section/section";
+import Section from "@/src/components/organisms/section";
 
 export default function Home() {
   return (
@@ -15,6 +13,8 @@ export default function Home() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat."
+        imageSrc="/nordic_45.jpg"
+        imageAlt="Nordic 45 render"
       />
       <Catalogue />
       <Section
@@ -27,6 +27,8 @@ export default function Home() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum."
+        imageSrc="/about_us.png"
+        imageAlt="About Us Image"
       />
       <Contact />
     </main>
