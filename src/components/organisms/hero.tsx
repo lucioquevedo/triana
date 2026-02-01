@@ -20,7 +20,7 @@ const Hero = () => {
     }
   });
   return (
-    <section className="max-w-screen overflow-hidden h-svh max-h-screen p-5 flex flex-col justify-center bg-[url(/nordic_36.jpg)]">
+    <section className="max-w-screen overflow-hidden h-svh max-h-screen p-5 flex flex-col justify-center relative">
       <AnimatePresence>
         {!scrolledDown && (
           <motion.div
@@ -45,6 +45,15 @@ const Hero = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      {/* <Image
+        src="/nordic_36.jpg"
+        alt="Triana Constructora Logo Overlay"
+        width={3840}
+        height={2702}
+        preload
+        style={{ width: "3000%" }}
+        className="absolute top-0 left-0 w-[3000%] h-full object-cover pointer-events-none -z-10"
+      /> */}
     </section>
   );
 };

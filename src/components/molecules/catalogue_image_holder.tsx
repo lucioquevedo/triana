@@ -4,6 +4,7 @@ import { Product } from "./catalogue_list";
 import classNames from "classnames";
 import { AnimatePresence, motion, wrap } from "motion/react";
 import CatalogueImageControls from "../atoms/catalogue_image_controls";
+import Image from "next/image";
 
 const CatalogueImageHolder = ({ product }: CatalogueImageHolderProps) => {
   const [[page, direction], setPage] = useState([0, 0]);
@@ -28,10 +29,8 @@ const CatalogueImageHolder = ({ product }: CatalogueImageHolderProps) => {
         )}
       >
         <AnimatePresence initial={false} custom={direction}>
-          <motion.img
+          <motion.div
             key={page}
-            src={images[imageIndex]}
-            alt={product.title}
             custom={direction}
             variants={variants}
             initial="enter"
@@ -53,8 +52,15 @@ const CatalogueImageHolder = ({ product }: CatalogueImageHolderProps) => {
                 paginate(-1);
               }
             }}
-            className="absolute w-full"
-          />
+            className="absolute w-full h-full"
+          >
+            <Image
+              src={images[imageIndex]}
+              alt={product.title}
+              fill
+              loading="lazy"
+            />
+          </motion.div>
         </AnimatePresence>
         <CatalogueImageControls imageIndex={imageIndex} paginate={paginate} />
       </motion.div>
