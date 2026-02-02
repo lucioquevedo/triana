@@ -5,7 +5,7 @@ const CatalogueImageControls = ({
   imageIndex,
   paginate,
 }: CatalogueImageControlsProps) => {
-  const text = ["plano", "render"];
+  const text = ["plano", "renderizado"];
 
   return (
     <div
