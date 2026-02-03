@@ -46,54 +46,14 @@ const Hero = () => {
             <Image
               src="/full_logo_white.png"
               alt="Triana Constructora Logo"
-              /* width={2481}
-        height={850} */
+              preload
               fill
             />
           </motion.div>
         )}
       </AnimatePresence>
-      {/*  <div className="absolute top-0 right-0 w-full h-full object-cover pointer-events-none -z-10">
-        <Image
-          src="/nordic_36.jpg"
-          alt="Triana Constructora Logo Overlay"
-          fill
-          className="brightness-50!"
-          preload
-        />
-      </div> */}
     </section>
   );
 };
 
 export default Hero;
-
-/* 
-<AnimatePresence>
-        {!scrolledDown && (
-          <motion.h1
-            layoutId="hero-title"
-            className="flex flex-col justify-end overflow-hidden"
-          >
-            <motion.span
-              initial={{ y: 500 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="text-7xl font-bold w-full lg:text-9xl inline-block overflow-y-hidden"
-              exit={{ x: -500 }}
-            >
-              TRIANA
-            </motion.span>
-            <motion.span
-              initial={{ y: 300 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-              className="text-3xl w-full lg:text-5xl"
-              exit={{ x: -300 }}
-            >
-              CONSTRUCTORA
-            </motion.span>
-          </motion.h1>
-        )}
-      </AnimatePresence>
-*/

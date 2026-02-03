@@ -13,12 +13,12 @@ export default function Home() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat."
-        imageSrc="/nordic_45.jpg"
-        imageAlt="Nordic 45 render"
+        imageSrc="/first_section.jpg"
+        imageAlt=""
       />
       <Catalogue />
       <Section
-        /* imagePosition="right" */ id="about"
+        id="about"
         title="Sobre nosotros"
         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -27,7 +27,7 @@ export default function Home() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum."
-        imageSrc="/about_us.png"
+        imageSrc="/about_us.jpg"
         imageAlt="About Us Image"
       />
       <Contact />
