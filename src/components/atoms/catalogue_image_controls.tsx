@@ -9,12 +9,12 @@ const CatalogueImageControls = ({
 
   return (
     <div
-      className="absolute top-5 left-5 bg-background p-3 z-20 hover:cursor-pointer backdrop-opacity-70"
+      className="absolute top-5 left-5 bg-background p-3 z-20 hover:cursor-pointer backdrop-opacity-70 text-xs lg:text-md"
       onClick={() => paginate(imageIndex === 0 ? 1 : -1)}
     >
       <div className="flex items-center gap-2">
         Ver {text[imageIndex]}{" "}
-        {imageIndex === 0 ? <ArrowRight size={24} /> : <ArrowLeft size={24} />}
+        {imageIndex === 0 ? <ArrowRight size={20} /> : <ArrowLeft size={20} />}
       </div>
     </div>
   );

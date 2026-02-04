@@ -1,5 +1,4 @@
 "use client";
-
 import SectionTitle from "../atoms/section_title";
 import SectionBody from "../atoms/section_body";
 import CatalogueImageHolder from "../molecules/catalogue_image_holder";
@@ -47,26 +46,31 @@ const products: Product[] = [
   {
     title: "Asis",
     render: "/catalogue/asis/asis_render.jpeg",
-    plan: "/catalogue/asis/asis_plan.jpg",
+    plan: "/catalogue/asis/asis_plan.png",
   },
   {
     title: "Genova",
     render: "/catalogue/genova/genova_render.jpeg",
-    plan: "/catalogue/genova/genova_plan.jpg",
+    plan: "/catalogue/genova/genova_plan.png",
   },
   {
     title: "Padua",
     render: "/catalogue/padua/padua_render.jpg",
-    plan: "/catalogue/padua/padua_plan.jpg",
+    plan: "/catalogue/padua/padua_plan.png",
   },
   {
     title: "Pompeya",
     render: "/catalogue/pompeya/pompeya_render.png",
-    plan: "/catalogue/pompeya/pompeya_plan.jpg",
+    plan: "/catalogue/pompeya/pompeya_plan.png",
   },
   {
     title: "Turin",
     render: "/catalogue/turin/turin_render.jpeg",
-    plan: "/catalogue/turin/turin_plan.jpg",
+    plan: "/catalogue/turin/turin_plan.png",
+  },
+  {
+    title: "Verona",
+    render: "/catalogue/verona/verona_render.jpeg",
+    plan: "/catalogue/verona/verona_plan.png",
   },
 ];

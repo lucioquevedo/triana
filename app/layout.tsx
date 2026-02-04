@@ -30,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${geistMono.variable} antialiased max-w-screen relative background`}
       >
+        <div id="modal-root" />
         <Header />
         {children}
         <Footer />
