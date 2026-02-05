@@ -22,12 +22,9 @@ const Section = ({
       {...props}
     >
       <div
-        className={classNames(
-          "relative aspect-video w-full bg-gray-700 lg:col-span-4",
-          {
-            "lg:col-start-3": imagePosition === "right",
-          },
-        )}
+        className={classNames("relative w-full bg-gray-700 lg:col-span-4", {
+          "lg:col-start-3": imagePosition === "right",
+        })}
       >
         {imageSrc && (
           <motion.img
@@ -35,7 +32,7 @@ const Section = ({
             layoutId={imageSrc + imageAlt}
             src={imageSrc}
             alt={imageAlt}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover lg:hover:cursor-zoom-in"
           />
         )}
       </div>

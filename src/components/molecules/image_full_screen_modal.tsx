@@ -17,15 +17,17 @@ const ImageFullScreenModal = ({
 
   return createPortal(
     <div
-      className="fixed max-h-screen inset-0 lg:p-16 overflow-clip flex items-center justify-center cursor-zoom-out"
+      className="fixed max-h-screen inset-0 overflow-clip grid cursor-zoom-out"
       onClick={onClose}
       style={{ zIndex: 300 }}
     >
       <div
-        className="fixed inset-0 bg-black opacity-20"
+        className="fixed inset-0 bg-black opacity-40"
         style={{ zIndex: -1 }}
       />
-      <div className="modal-content" /* onClick={(e) => e.stopPropagation()} */>
+      <div
+        className="w-full lg:max-w-5xl self-center justify-self-center" /* onClick={(e) => e.stopPropagation()} */
+      >
         {children}
       </div>
     </div>,
