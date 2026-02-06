@@ -1,24 +1,11 @@
 "use client";
-import {
-  AnimatePresence,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-} from "motion/react";
+import useScrollDown from "@/src/hooks/use_scroll_down";
+import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import { useState } from "react";
 
 const Hero = () => {
-  const { scrollY } = useScroll();
-  const [scrolledDown, setScrolledDown] = useState(false);
+  const scrolledDown = useScrollDown();
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 0) {
-      setScrolledDown(true);
-    } else {
-      setScrolledDown(false);
-    }
-  });
   return (
     <section
       className="max-w-screen overflow-hidden h-svh max-h-screen flex flex-col justify-center bg-cover"
