@@ -5,6 +5,8 @@
   /* --background: #fff8f0; */
   --foreground: #3b3b3b;
   --main-color: #35546d;
+  scroll-behavior: smooth;
+  scroll-padding: 80px;
 }
 
 @theme inline {

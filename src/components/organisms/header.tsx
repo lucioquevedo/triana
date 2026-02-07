@@ -3,7 +3,7 @@ import useScrollDown from "@/src/hooks/use_scroll_down";
 import classNames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import NavList from "../molecules/nav_list";
+import NavMenu from "../molecules/nav_menu";
 
 const Header = () => {
   const scrolledDown = useScrollDown();
@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <nav
       className={classNames(
-        "z-50 fixed top-0 left-0 w-full max-w-screen justify-between p-5 flex items-center gap-2.5",
+        "z-30 fixed top-0 left-0 w-full max-w-screen justify-between p-5 flex items-center gap-2.5",
         {
           "bg-background": scrolledDown,
         },
@@ -35,7 +35,7 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <NavList />
+      <NavMenu />
     </nav>
   );
 };
