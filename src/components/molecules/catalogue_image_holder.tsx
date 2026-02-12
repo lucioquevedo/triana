@@ -58,6 +58,7 @@ const CatalogueImageHolder = ({ product }: CatalogueImageHolderProps) => {
               src={images[imageIndex]}
               alt={product.title}
               fill
+              quality={50}
               loading="lazy"
             />
           </motion.div>
