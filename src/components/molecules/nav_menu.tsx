@@ -25,7 +25,17 @@ const NavMenu = () => {
         variants={sidebarVariants}
         className="bg-background absolute w-full h-screen -z-10"
       />
-      <div className="flex flex-col justify-between h-screen">
+      <motion.div
+        className="flex flex-col justify-between h-screen"
+        variants={{
+          open: {
+            display: "flex",
+          },
+          closed: {
+            display: "none",
+          },
+        }}
+      >
         <motion.ul
           variants={navVariants}
           className="z-50 flex flex-col gap-4 mt-20 p-5 tracking-tighter"
@@ -50,7 +60,7 @@ const NavMenu = () => {
         >
           <Image src="/full_logo.png" alt="triana logo" fill />
         </motion.div>
-      </div>
+      </motion.div>
       <NavMenuToggle toggle={() => setIsOpen(!isOpen)} />
     </motion.nav>
   );
