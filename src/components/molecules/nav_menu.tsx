@@ -37,7 +37,6 @@ const NavMenu = () => {
               className="text-5xl lg:text-7xl font-bold"
               onClick={() => setIsOpen(false)}
               whileHover={{
-                textDecoration: "underline",
                 color: "var(--main-color)",
               }}
             >
@@ -46,7 +45,7 @@ const NavMenu = () => {
           ))}
         </motion.ul>
         <motion.div
-          className="relative aspect-2481/850 w-1/2 md:w-1/4"
+          className="relative aspect-2481/850 w-1/2 md:w-1/6"
           variants={logoVariants}
         >
           <Image src="/full_logo.png" alt="triana logo" fill />
@@ -123,12 +122,16 @@ const sidebarVariants: Variants = {
 
 const logoVariants: Variants = {
   open: {
+    opacity: 1,
+    scale: 1,
     display: "flex",
     transition: {
       delay: 1,
     },
   },
   closed: {
+    opacity: 0,
+    scale: 0,
     display: "none",
   },
 };
