@@ -1,11 +1,9 @@
 "use client";
-import useScrollDown from "@/src/hooks/use_scroll_down";
-import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 
 const Hero = () => {
-  const scrolledDown = useScrollDown();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -20,6 +18,12 @@ const Hero = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0", "-100%"]);
 
+  const overflow = useTransform(
+    scrollYProgress,
+    [0, 0.01],
+    ["hidden", "visible"],
+  );
+
   return (
     <section
       className="max-w-screen overflow-hidden h-svh max-h-screen flex flex-col justify-center items-center bg-cover"
@@ -31,9 +35,10 @@ const Hero = () => {
       }}
       ref={containerRef}
     >
-      {/* <AnimatePresence>
-        {!scrolledDown && ( */}
-      <div className="overflow-hidden w-full lg:w-3/4 xl:w-1/2">
+      <motion.div
+        className="overflow-hidden w-full lg:w-3/4 xl:w-1/2"
+        style={{ clipPath: "inset( -100vw 0px 0px 0px )", overflow }}
+      >
         <motion.div
           initial={{ y: "100%", filter: "blur(10px)" }}
           animate={{ y: 0, filter: "none" }}
@@ -43,11 +48,6 @@ const Hero = () => {
             stiffness: 60,
             damping: 10,
           }}
-          /* exit={{
-                y: "-100%",
-                filter: "blur(10px)",
-                transition: { duration: 0.6 },
-              }} */
           style={{ filter, y }}
           className="w-full relative aspect-2025/614"
         >
@@ -58,9 +58,7 @@ const Hero = () => {
             fill
           />
         </motion.div>
-      </div>
-      {/* )}
-      </AnimatePresence> */}
+      </motion.div>
     </section>
   );
 };
