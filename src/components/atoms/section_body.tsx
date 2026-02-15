@@ -1,8 +1,21 @@
-import React from "react";
+"use client";
+import { motion, MotionProps } from "motion/react";
 
-const SectionBody = ({ children }: { children: React.ReactNode }) => {
+const SectionBody = ({ children, ...props }: MotionProps) => {
   return (
-    <p className="text-gray-600 my-3 tracking-tight xl:text-2xl">{children}</p>
+    <motion.p
+      {...props}
+      initial={{
+        filter: "blur(5px)",
+      }}
+      whileInView={{
+        filter: "none",
+      }}
+      transition={{ duration: 0.4 }}
+      className="text-gray-600 my-3 tracking-tight xl:text-2xl"
+    >
+      {children}
+    </motion.p>
   );
 };
 

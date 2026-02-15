@@ -18,6 +18,8 @@ const CatalogueItem = ({
         "relative lg:text-xl border-b font-medium cursor-pointer pb-2 hover:border-[#37536C] transition-colors duration-100",
       )}
       whileHover={{ color: "#37536C" }}
+      initial={{ y: "100%", opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
     >
       {children}
       {isActive && (

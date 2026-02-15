@@ -13,22 +13,22 @@ const Header = () => {
       className={classNames(
         "z-30 fixed top-0 left-0 w-full max-w-screen justify-between p-5 flex items-center gap-2.5",
         {
-          "bg-background": scrolledDown,
+          "bg-background shadow-md": scrolledDown,
         },
       )}
     >
       <AnimatePresence>
         {scrolledDown && (
           <motion.div
-            initial={{ x: "-100%" }}
-            animate={{ x: 0 }}
+            initial={{ filter: "blur(5px)", opacity: 0.2 }}
+            animate={{ filter: "none", opacity: 1 }}
             transition={{
               duration: 0.4,
               type: "spring",
               stiffness: 60,
               damping: 10,
             }}
-            exit={{ x: "-100%", transition: { duration: 0.2 } }}
+            exit={{ opacity: 0.2, transition: { duration: 0.2 } }}
             className="h-10 relative aspect-2481/850"
           >
             <Image src="/full_logo.png" alt="Triana Constructora Logo" fill />

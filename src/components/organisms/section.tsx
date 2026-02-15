@@ -37,22 +37,14 @@ const Section = ({
         )}
       </div>
       <div
-        className={classNames("p-5 sticky lg:col-span-2 lg:px-12 lg:py-0", {
-          "lg:col-start-1 lg:row-start-1": imagePosition === "right",
-        })}
-      >
-        {title && (
-          <span className="overflow-y-clip block pb-1.5">
-            <SectionTitle
-              initial={{ y: "90%" }}
-              whileInView={{ y: 0 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
-            >
-              {title}
-            </SectionTitle>
-          </span>
+        className={classNames(
+          "p-5 sticky h-fit lg:col-span-2 lg:px-12 lg:py-0",
+          {
+            "lg:col-start-1 lg:row-start-1": imagePosition === "right",
+          },
         )}
+      >
+        {title && <SectionTitle>{title}</SectionTitle>}
         {body && <SectionBody>{body}</SectionBody>}
       </div>
       <ImageFullScreenModal isOpen={open} onClose={() => setOpen(false)}>

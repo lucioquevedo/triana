@@ -14,16 +14,7 @@ const Catalogue = () => {
       className="relative w-full my-16 grid grid-cols-1 lg:grid-cols-6 lg:my-52"
     >
       <div className="p-5 lg:col-span-2 lg:px-12 lg:py-0">
-        <span className="overflow-y-clip block pb-1.5">
-          <SectionTitle
-            initial={{ y: "99%" }}
-            whileInView={{ y: 0 }}
-            transition={{ duration: 0.4 }}
-            viewport={{ once: true }}
-          >
-            Nuestro catálogo
-          </SectionTitle>
-        </span>
+        <SectionTitle>Nuestro catálogo</SectionTitle>
         <SectionBody>
           Este es el catálogo de productos. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

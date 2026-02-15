@@ -1,5 +1,6 @@
 "use client";
 import CatalogueItem from "../atoms/catalogue_item";
+import { motion, stagger } from "motion/react";
 
 const CatalogueList = ({
   products,
@@ -7,7 +8,10 @@ const CatalogueList = ({
   setActiveProductId,
 }: CatalogueListProps) => {
   return (
-    <ul className="my-10 grid grid-cols-2 gap-4 lg:grid-cols-1">
+    <motion.ul
+      className="my-10 grid grid-cols-2 gap-4 lg:grid-cols-1"
+      transition={{ delayChildren: stagger(1, { startDelay: 0.5 }) }}
+    >
       {products.map((product, idx) => (
         <CatalogueItem
           key={idx}
@@ -17,7 +21,7 @@ const CatalogueList = ({
           {product.title}
         </CatalogueItem>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 
